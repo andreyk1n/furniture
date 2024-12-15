@@ -79,14 +79,17 @@ a:active {
     cursor: pointer;
     border: 0;
     outline: 0;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #F7515C;
 }
 
 .button:hover {
-    background-color: $buttonHover;
+    background-color: #fff;
 }
 
 .button:active {
-    background-color: $buttonActive;
+    background-color: #fff;
 }
 
 // Загальні стилі для списків
@@ -97,7 +100,42 @@ ol, ul {
     }
 }
 
-h1 {
-    @include adaptiveValue('font-size', 60px, 24px);
+// title 
+
+.title {
+    font-size: clamp(22px, 5vw, 60px);
+    font-weight: 700;
+}
+
+// span .transparent
+
+.transparent {
+    color: transparent; 
+    -webkit-text-stroke: 1px $fontColor; 
+    font-size: clamp(32px, 5vw, 100px);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/dist/fonts/Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/dist/fonts//Montserrat-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/dist/fonts//Montserrat-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 

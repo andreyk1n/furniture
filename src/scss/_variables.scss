@@ -1,10 +1,10 @@
 // ШРИФТИ
-$fontFamily: Arial, Helvetica, sans-serif;
-$fontSize: 18px;
+$fontFamily: 'Montserrat', sans-serif;
+$fontSize: 14px;
 
 // Кольори
 $bgColor: white;
-$transitionDuration: .8s;
+$transitionDuration: .5s;
 $fontColor: rgb(73, 78, 124);
 $linkColor: red;
 $linkHoverColor: rgba(255, 0, 0, 0.578);
@@ -17,21 +17,21 @@ $paddingMedium: 15px;
 $paddingLarge: 30px;
 
 // Розмір і вага заголовків
-$h1FontSize: 40px;
-$h2FontSize: 28px;
-$h3FontSize: 20px;
-$mainFontWeight: 400;
-$h1FontWeight: 900;
-$h2FontWeight: 800;
-$h3FontWeight: 700;
+// $h1FontSize: 40px;
+// $h2FontSize: 28px;
+// $h3FontSize: 20px;
+// $mainFontWeight: 400;
+// $h1FontWeight: 900;
+// $h2FontWeight: 800;
+// $h3FontWeight: 700;
 
 // Стилі кнопки .button
-$buttonBgColor: rgb(80, 80, 117);
+$buttonBgColor: #F7515C;
 $buttonFontColor: white;
-$buttonPaddings: 5px 20px;
-$buttonBorderRadius: 10px;
-$buttonHover: lightBlue;
-$buttonActive: rgb(16, 77, 97);
+$buttonPaddings: 15px 20px;
+$buttonBorderRadius: 0;
+$buttonHover: white;
+$buttonActive: white;
 
 // Обмеження контейнера
 $maxWidthContainer: 1170px;
