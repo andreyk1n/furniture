@@ -5,10 +5,10 @@ $fontSize: 14px;
 // Кольори
 $bgColor: white;
 $transitionDuration: .5s;
-$fontColor: rgb(73, 78, 124);
-$linkColor: red;
-$linkHoverColor: rgba(255, 0, 0, 0.578);
-$activeColor: green;
+$fontColor: #282A30;
+$linkColor: #282A30;
+$linkHoverColor: #282A30;
+$activeColor: #282A30;
 $boxShadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 // Внутрішні відступи
@@ -34,7 +34,7 @@ $buttonHover: white;
 $buttonActive: white;
 
 // Обмеження контейнера
-$maxWidthContainer: 1170px;
+$maxWidthContainer: 1200px;
 $paddingContainer: 15px;
 
 // Адаптив

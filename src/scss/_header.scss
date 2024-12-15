@@ -6,32 +6,96 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition: top $transitionDuration;
+    transition-duration: $transitionDuration;
+    padding: 40px 0;
+    background-color: #fff;
+
+    &__logo {
+        z-index: 10;
+    }
+
+    &.scroll-header {
+        padding: 20px 0;
+    }
+
+    @media (max-width: 992px) {
+        padding: 20px 0;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__links {
+        width: 100%;
+        max-width: 580px;
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        align-items: center;
+        font-size: 18px;
+
+        a {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                width: 0;
+                height: 2px;
+                background-color: $fontColor;
+                transition-duration: $transitionDuration;
+            }
+    
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 60px; 
+        a {
+            transition-duration: $transitionDuration;
+            &:hover {
+                opacity: .5;
+            }
+        }
+    }
 
     &__nav {
         width: 100%;
-        max-width: 715px;
+        max-width: 850px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 15px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             position: absolute;
-            right: -100%; 
+            right: -100%;
             top: 0;
             flex-direction: column;
             gap: 25px;
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 100vh; 
+            min-height: 100vh;
             background-color: #ffffff;
             transition-duration: $transitionDuration;
         }
-    
+
         &.active {
-            right: 0; // Коли активне, меню буде видно
+            right: 0; 
         }
     }
 
@@ -39,7 +103,26 @@
         display: none;
     }
 
-    @media (max-width:768px) {
+    @media (max-width: 992px) {
+
+        &__nav {
+            max-width: 400px;
+            max-height: 100vh;  
+            overflow-y: auto;         
+        }
+        &__links {
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 20px;
+            max-height: 100vh;       
+            overflow-y: auto;          
+            a {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
         &__burger {
             min-width: 20px;
             width: 40px;
@@ -50,45 +133,56 @@
             cursor: pointer;
             position: relative;
             z-index: 11;
-        
+
             span {
                 display: block;
                 width: 100%;
-                height: 2px;
-                background-color: $buttonBgColor;
+                height: 3px;
+                background-color: $fontColor;
                 position: relative;
                 transition-duration: $transitionDuration;
-        
-                &::before,
+                border-radius: 4px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 60%;
+                    height: 3px;
+                    background-color: $fontColor;
+                    transition-duration: $transitionDuration;
+                    left: 0;
+                    border-radius: 4px;
+                }
+
                 &::after {
                     content: "";
                     position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $buttonBgColor;
+                    width: 60%;
+                    height: 3px;
+                    background-color: $fontColor;
                     transition-duration: $transitionDuration;
+                    right: 0;
+                    border-radius: 4px;
                 }
-        
+
                 &::before {
-                    top: -10px; 
+                    top: -10px;
                 }
-        
+
                 &::after {
-                    top: 10px; 
+                    top: 10px;
                 }
             }
-    
+
             &.active span {
-                background-color: transparent; 
-        
                 &::before {
-                    top: 0;
-                    transform: rotate(45deg); 
+                    left: calc(100% - 40px); 
+                    transform: translateX(70%); 
                 }
-        
+            
                 &::after {
-                    top: 0;
-                    transform: rotate(-45deg); 
+                    transform: translateX(-70%);
+                    right: calc(100% - 40px);
                 }
             }
         }
