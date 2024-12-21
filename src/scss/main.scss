@@ -1,6 +1,7 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'header';
+@use 'hero';
 @use 'footer';
 
 
@@ -90,15 +91,19 @@ a:active {
 
 .button:hover {
     background-color: #fff;
+    color: #F7515C;
 }
 
 .button:active {
     background-color: #fff;
+    color: #F7515C;
 }
 
 // Загальні стилі для списків
-ol, ul {
+ol,
+ul {
     padding-left: 20px;
+
     li:not(:last-child) {
         padding-bottom: 15px;
     }
@@ -107,16 +112,62 @@ ol, ul {
 // title 
 
 .title {
-    font-size: clamp(22px, 5vw, 60px);
+    font-size: clamp(28px, 5vw, 60px);
     font-weight: 700;
 }
 
 // span .transparent
 
 .transparent {
-    color: transparent; 
-    -webkit-text-stroke: 1px $fontColor; 
+    color: transparent;
+    -webkit-text-stroke: 1px $fontColor;
     font-size: clamp(32px, 5vw, 100px);
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: block;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 70px 0 rgba(0, 0, 0, .35);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 16px solid #282A30; 
+    }
+}
+
+.video__button {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    color: #282a30;
+    font-size: 18px;
+    font-weight: 600;
+    transition-duration: $transitionDuration;
+
+
+    &:hover {
+        gap: 36px;
+    }
 }
 
 @font-face {
@@ -142,4 +193,3 @@ ol, ul {
     font-style: normal;
     font-display: swap;
 }
-
