@@ -9,6 +9,19 @@
         align-items: center;
         gap: 20px;
 
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: url('/images/hero_bg.svg');
+            z-index: -1;
+        }
+
         @media (max-width: 992px) {
             flex-direction: column;
             gap: 40px;
