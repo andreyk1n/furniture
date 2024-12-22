@@ -10,7 +10,6 @@
         gap: 20px;
 
         position: relative;
-
         &::before {
             content: '';
             position: absolute;
@@ -33,6 +32,23 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 260px;
+            background-color: #F7515C;
+            left: -100px;
+            top: -80px;
+        }
+
+        @media (max-width: 1400px) {
+            &::before {
+                display: none;
+            }
+        }
 
         @media (max-width: 992px) {
             max-width: 465px;
@@ -68,5 +84,7 @@
         height: 100%;
         max-width: 465px;
         max-height: 698px;
+
+
     }
 }
