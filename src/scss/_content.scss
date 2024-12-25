@@ -1,12 +1,28 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 .content {
+    
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row-reverse;
         gap: 20px;
+        position: relative;
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            left: -48px;
+            bottom: 22px;
+            width: 205px;
+            height: 180px;
+            background-color: #282a30;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
 
         @media (max-width: 992px) {
             flex-direction: column;
@@ -18,6 +34,38 @@
         height: 100%;
         max-width: 500px;
         max-height: 714px;
+    &-wrapper {
+        position: relative;
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            right: -48px;
+            bottom: 86px;
+            width: 440px;
+            height: 305px;
+            background-color: #282a30;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
+
+        &::after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            right: -90px;
+            bottom: -87px;
+            width: 480px;
+            height: 305px;
+            background-image: url(/images/hero_decor.png);
+
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
 
         @media (max-width: 992px) {
             max-width: 465px;
