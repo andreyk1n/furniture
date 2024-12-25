@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+.content {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 20px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
+        max-height: 714px;
+
+        @media (max-width: 992px) {
+            max-width: 465px;
+        }
+    }
+
+    &__content {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        &>p {
+            @include adaptiveValue('font-size', 22px, 16px);
+            max-width: 540px;
+            line-height: 140%;
+        }
+
+        @media (max-width: 992px) {
+            max-width: 465px;
+            gap: 30px;
+        }
+    }
+}

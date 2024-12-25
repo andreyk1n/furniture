@@ -3,6 +3,7 @@
 @use 'header';
 @use 'hero';
 @use 'footer';
+@use 'content';
 
 
 // Підключення стилів аккордіону
@@ -40,6 +41,7 @@ body {
     flex-direction: column;
     width: 100%;
     justify-content: center;
+    gap: 60px;
 }
 
 .no-scroll {
@@ -114,6 +116,7 @@ ul {
 .title {
     font-size: clamp(28px, 5vw, 60px);
     font-weight: 700;
+    color: #282A30;
 }
 
 // span .transparent
