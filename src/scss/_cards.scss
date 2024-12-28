@@ -19,8 +19,8 @@
             left: 0;
             bottom: -190px;
             background-image: url(/images/cards_decor.svg);
-            width: 480px;
-            height: 300px;
+            width: 482px;
+            height: 308px;
 
             @media (max-width: 768px) {
                 display: none;
@@ -101,6 +101,7 @@
 
             @media (max-width: 768px) {
                 position: static;
+                align-self: flex-start;
             }
         }
 
@@ -115,6 +116,7 @@
 
             @media (max-width: 768px) {
                 position: static;
+                align-self: flex-end;
             }
         }
 
@@ -125,6 +127,7 @@
 
             @media (max-width: 768px) {
                 position: static;
+                align-self: flex-start;
             }
         }
     }
