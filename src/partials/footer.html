@@ -29,6 +29,17 @@
     <script src="js/functions/lazyImg.js" defer></script>
     <script type="module" src="js/app.js"></script>
 
+
+    <script src="js/functions/swiper.min.js" defer></script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement('script');
+        script.src = "js/functions/swiperInit.js";
+        document.body.appendChild(script);
+      }, 1000); // 1 секунда
+    </script>
+
+
     <script>
       window.addEventListener('load', () => {
         setTimeout(() => {
