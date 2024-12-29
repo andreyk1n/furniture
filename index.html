@@ -14,7 +14,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/main.min.css">
-  <!-- <link rel="stylesheet" href="./swiper.min.css"> -->
+  <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 
 <body>
@@ -121,6 +121,26 @@
     </div>
   </section>
   
+  <section class="section slider">
+    <div class="slider__container">
+      <h2 class="slider__title title">Our you have to buy<br><span class="transparent">Product</span></h2>
+      <div class="swiper swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 2<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 3<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 4<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 5<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 6<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 7<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+            <div class="swiper-slide">Slide 8<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, suscipit quibusdam? Nulla iure reprehenderit modi odio voluptate, laboriosam aliquid sed iste neque, repellendus porro ipsam magnam! Officia velit magnam sit.</div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+  
+    </div>
+  </section>
 </div>
 
     <footer class="footer">
@@ -153,6 +173,17 @@
     </footer>
     <script src="js/functions/lazyImg.js" defer></script>
     <script type="module" src="js/app.js"></script>
+
+
+    <script src="js/functions/swiper.min.js" defer></script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement('script');
+        script.src = "js/functions/swiperInit.js";
+        document.body.appendChild(script);
+      }, 1000); // 1 секунда
+    </script>
+
 
     <script>
       window.addEventListener('load', () => {
