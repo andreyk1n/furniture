@@ -142,20 +142,20 @@ const swiper = new Swiper('.swiper-container', {
     /* ==================== Адаптивність (Breakpoints) ==================== */
   
     // Налаштування для різних розмірів екранів
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 10,
-    //   },
-    //   640: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-    //   },
-    //   1024: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 30,
-    //   },
-    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
   
     /* ==================== Lazy Loading ==================== */
   
